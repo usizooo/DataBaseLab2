@@ -1,0 +1,45 @@
+﻿<Page x:Class="DataBaseLab2.CatssittersEFPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBaseLab2"
+        mc:Ignorable="d"
+        Title="CatssittersEFPage" Height="700" Width="1100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Cats Sitters DB with Entity Framework" FontFamily="Cascadia Code SemiBold" Grid.ColumnSpan="5" Margin="5"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"  Height="200" Grid.Row="1" Grid.ColumnSpan="5" Margin="5">
+            <DataGrid x:Name="catsSittersDataGrid" FontFamily="Cascadia Code SemiBold" IsReadOnly="True" Margin="5" AutoGenerateColumns="True" SelectionChanged="catsSittersDataGrid_SelectionChanged" />
+        </ScrollViewer>
+        
+        <Label Content="Имя" FontFamily="Cascadia Code SemiBold" Grid.Row="2" Margin="5"/>
+        <Label Content="Фамилия" FontFamily="Cascadia Code SemiBold" Grid.Row="2" Grid.Column="1" Margin="5"/>
+        <Label Content="Отчество" FontFamily="Cascadia Code SemiBold" Grid.Row="2" Grid.Column="2" Margin="5"/>
+        <Label Content="Опыт работы" FontFamily="Cascadia Code SemiBold" Grid.Row="2" Grid.Column="3" Margin="5"/>
+
+        <TextBox x:Name="firstNameTextBox" FontFamily="Cascadia Code SemiBold" Grid.Row="3" Margin="5"/>
+        <TextBox x:Name="surnameTextBox" FontFamily="Cascadia Code SemiBold" Grid.Row="3" Grid.Column="1"  Margin="5"/>
+        <TextBox x:Name="midleNameTextBox" FontFamily="Cascadia Code SemiBold" Grid.Row="3" Grid.Column="2"  Margin="5"/>
+        <TextBox x:Name="workExpirienceTextBox" FontFamily="Cascadia Code SemiBold" Grid.Row="3" Grid.Column="3"  Margin="5"/>
+
+        <Button x:Name="createItemButton" Content="Добавить" Foreground="White" FontFamily="Cascadia Code SemiBold" Grid.Row="4" Grid.ColumnSpan="5" Margin="5" Click="createItemButton_Click"/>
+        <Button x:Name="editItemButton"   Content="Изменить" Foreground="White" FontFamily="Cascadia Code SemiBold" Grid.Row="5" Grid.ColumnSpan="5" Margin="5" Click="editItemButton_Click"/>
+        <Button x:Name="deleteItemButton" Content="Удалить"  Foreground="White" FontFamily="Cascadia Code SemiBold" Grid.Row="6" Grid.ColumnSpan="5" Margin="5" Click="deleteItemButton_Click"/>
+
+    </Grid>
+</Page>
